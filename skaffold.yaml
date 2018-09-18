@@ -3,7 +3,7 @@ kind: Config
 build:
   tagPolicy:
     envTemplate:
-      template: "{{.DOCKER_REGISTRY}}/johnmcollier/microprofile:{{.VERSION}}"
+      template: "{{.DOCKER_REGISTRY}}/{{.GITUSER}}/microprofile:{{.VERSION}}"
   artifacts:
   - imageName: changeme
     workspace: .
@@ -17,7 +17,7 @@ profiles:
   build:
     tagPolicy:
       envTemplate:
-        template: "{{.DOCKER_REGISTRY}}/johnmcollier/microprofile:{{.DIGEST_HEX}}"
+        template: "{{.DOCKER_REGISTRY}}/{{.GITUSER}}/microprofile:{{.DIGEST_HEX}}"
     artifacts:
     - docker: {}
     local: {}
@@ -27,5 +27,5 @@ profiles:
       - name: microprofile
         chartPath: charts/microprofile
         setValueTemplates:
-          image.repository: "{{.DOCKER_REGISTRY}}/johnmcollier/microprofile"
+          image.repository: "{{.DOCKER_REGISTRY}}/{{.GITUSER}}/microprofile"
           image.tag: "{{.DIGEST_HEX}}"
