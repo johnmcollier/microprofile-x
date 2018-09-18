@@ -18,7 +18,7 @@ public class HealthEndpoint {
         return Response.status(503).entity("{\"status\":\"DOWN\"}").build();
       }
       */
-      return Response.ok("{\"status\":\"UP\"}").build();
+      return Response.ok("{\"status\":\"UPDATED\"}").build();
     }
 
 }
