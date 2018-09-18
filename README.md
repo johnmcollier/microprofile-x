@@ -19,7 +19,10 @@ IBM Cloud Microservice Starter for Java - MicroProfile / Java EE running on Jenk
 
 ### Differences w/ Microclimate:
 - Maven build runs in devpod container, rather than the project's container
-		- Which means updates are slower. For a simple code change, have to do maven build + docker build
+
+	- Which means updates are slower. For a simple code change, have to do maven build + docker build
 - Much less error handling / validation than Microclimate
-		- The user is expected to make sure the project they're using in the devpods is correct
-		- Won't find out you've got a problem with your project structure until the build fails
+	
+	- The user is expected to make sure the project they're using in the devpods is correct
+	- Won't find out you've got a problem with your project structure until the build fails
+- The "Bring-your-own-editor" support is really nice. Works really well.
